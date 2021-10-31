@@ -29,3 +29,6 @@ ToDo:
 Podsumowanie:
  
   Bardzo dziękuję za przysłane mi zadanie, ze względu na czas, jakim dysponowałem nie byłem w stanie wykonać zadania w 100% ukazujących moje umiejętnośći, jednakże mam nadzieję, że przesłane przeze mnie rozwiązanie, które Państwu dostarczyłem, ukazuje mój potencjał na stawowisko Junior React Developera.
+
+
+  ![View Page](./trello/trello.png) 
