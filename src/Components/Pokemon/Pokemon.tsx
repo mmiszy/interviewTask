@@ -33,6 +33,7 @@ export const Pokemon = ({ name, url }: PokemonProps) => {
             <img
               src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`}
               alt={name}
+              loading="lazy"
             />
           </figure>
           {name} #{id}

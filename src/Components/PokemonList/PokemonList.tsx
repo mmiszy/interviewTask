@@ -5,15 +5,20 @@ import { errorToString } from "../../utils";
 import { fetchPokemonBriefs } from "../../queries/requests";
 import { SearchPokemon } from "../SearchPokemon/SearchPokemon";
 import { useState } from "react";
+import { useDebouncedState } from "../../hooks/useDebouncedState";
 
 export const PokemonList = () => {
   const [search, setSearch] = useState("");
+  const debouncedSearch = useDebouncedState(search);
   const {
     data: pokemons,
     error,
     isError,
     isLoading,
-  } = useQuery([QUERY_KEYS.POKEMON_BRIEFS, search], fetchPokemonBriefs);
+  } = useQuery(
+    [QUERY_KEYS.POKEMON_BRIEFS, debouncedSearch],
+    fetchPokemonBriefs
+  );
 
   if (isError) {
     return <div>Error! {errorToString(error)}</div>;
