@@ -1,7 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
+interface SearchPokemonProps {
+  onFilterPokemonsByName: React.ChangeEventHandler<HTMLInputElement>;
+}
 
-export const SearchPokemon = ({ onFilterPokemonsByName }) => {
+export const SearchPokemon = ({
+  onFilterPokemonsByName,
+}: SearchPokemonProps) => {
   return (
     <nav className="m-6" role="navigation">
       <input
@@ -15,7 +18,4 @@ export const SearchPokemon = ({ onFilterPokemonsByName }) => {
       />
     </nav>
   );
-};
-SearchPokemon.propTypes = {
-  onFilterPokemonsByName: PropTypes.func.isRequired,
 };

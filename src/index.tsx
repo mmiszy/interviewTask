@@ -1,20 +1,20 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import { render } from "react-dom";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { QueryClientProvider } from "react-query";
 import { App } from "./Components/App/App";
-import reportWebVitals from "./reportWebVitals";
-import { queryClient } from "./Api/queryClient";
+import { reportWebVitals } from "./reportWebVitals";
+import { queryClient } from "./queries/queryClient";
+import { StrictMode } from "react";
 
-ReactDOM.render(
-  <React.StrictMode>
+render(
+  <StrictMode>
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
         <App />
       </BrowserRouter>
     </QueryClientProvider>
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById("root")
 );
 

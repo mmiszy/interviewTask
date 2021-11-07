@@ -1,7 +1,10 @@
-import React from "react";
 import PropTypes from "prop-types";
 
-export const LoadMore = ({ onLoadMore }) => {
+interface LoadMoreProps {
+  onLoadMore: React.MouseEventHandler<HTMLButtonElement>;
+}
+
+export const LoadMore = ({ onLoadMore }: LoadMoreProps) => {
   return (
     <button
       type="submit"
